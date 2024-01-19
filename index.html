@@ -7,23 +7,33 @@
     <meta name="description" content="Опис проєкту">
     <meta name="keywords" content="Опис, проєкт">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="script.js"></script>
     <noscript>У вас не працює JS</noscript>
     <base target="_blank">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+        }
         body {
             background: lightblue;
+        }
+        header, footer {
+            background: lightgreen;
         }
     </style>
 </head>
 
 <body>
-    <h1>Великий заголовок 1 рівня</h1>
+    <header>
+        <h1>Великий заголовок 1 рівня</h1>
+        <abbr title="Мова розмітки гіпертексту"><dfn>HTML</dfn></abbr><br>
+        <a href="https://google.com">Google</a>
+        <a href="contacts.html" target="_self">Контакти</a>
+        <a href="#footer" target="_self">Якір</a>
+    </header>
     <h6>Маленький заголовок 6 рівня</h6>
-    <a href="https://google.com">Google</a>
-    <abbr title="Мова розмітки гіпертексту"><dfn>HTML</dfn></abbr>
-    <time datetime="2024-01-16 14:45:00:000">16.01.2024 14:45</time>
     <p>
         <b>Lorem ipsum dolor</b><br> sit amet consectetur <strong>adipisicing elit</strong>. Sit nihil minima dolor nisi
         iusto esse voluptas,
@@ -46,15 +56,14 @@
         fugiat?
     </p>
     <cite>Джерело: google.com</cite>
-    <address>Україна, Донецька обл., м. Краматорськ</address>
     <code>Console.WriteLine("Hello World!");</code>
     <samp>Hello World!</samp>
-    <ol>
+    <ol start="4" type="I">
         <li>html</li>
         <li>css</li>
         <li>js</li>
     </ol>
-    <ul>
+    <ul type="square">
         <li>html</li>
         <li>css</li>
         <li>js</li>
@@ -65,7 +74,14 @@
         <dt>css</dt>
         <dd>Каскадна таблиця стилів</dd>
     </dl>
-
+    <img width="100" src="picture.jpg" alt="Природа у JPG"><br>
+    <audio src="music.mp3" controls></audio><br>
+    <video src="" controls poster="world-continents.png"></video><br>
+    <iframe width="500" height="200" src="https://htmlreference.io" frameborder="0"></iframe>
+    <footer id="footer">
+        <address>Україна, Донецька обл., м. Краматорськ</address>
+        <small><time datetime="2024-01-16 14:45:00:000">16.01.2024 14:45</time>. Всі права збережені.</small>       
+    </footer>
 </body>
 
 </html>
