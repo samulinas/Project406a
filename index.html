@@ -67,7 +67,8 @@
         table {
             width: 100%;
         }
-/*         thead {
+
+        /*         thead {
             background: lightcoral;
         }
         tfoot {
@@ -80,12 +81,15 @@
             text-indent: 1.25cm;
             text-align: left;
         }
+
         .pink {
             background: pink;
         }
+
         .red {
             background: red;
         }
+
         form {
             border: 1px solid black;
         }
@@ -164,8 +168,8 @@
                 <table>
                     <caption>Таблиця 1 - Назва таблиці</caption>
                     <colgroup>
-                    <col class="red" span="2">
-                    <col class="pink" span="2">
+                        <col class="red" span="2">
+                        <col class="pink" span="2">
                     </colgroup>
                     <thead>
                         <tr>
@@ -200,6 +204,34 @@
                     </tfoot>
                 </table>
                 <form action="handler.php">
+                    <input type="hidden" name="hidden">
+                    <output id="output"></output>
+                    <label>0</label>
+                    <input value="0" type="range" min="0" max="10" step="1" name="range" id="range">
+                    <script>
+                        const output = document.querySelector("#output");
+                        const input = document.querySelector("#range");
+                        output.textContent = input.value;
+                        input.addEventListener("input", (event) => {
+                            output.textContent = event.target.value;
+                        });
+                    </script>
+                    <label>10</label>
+                    <input type="image" src="" alt="">
+
+                    <input type="datetime-local" name="datetime-local" id="datetime-local">
+                    <input autocomplete="off" type="year" name="year" id="year">
+                    <input type="week" name="week" id="week">
+                    <input type="month" name="month" id="month">
+                    <input type="time" name="time" id="time">
+                    <input type="date" name="date" id="date">
+
+                    <input type="tel" name="tel" id="tel" value="380" pattern="[0-9]{12}"
+                        title="Введіть дані формату 380[0-9]{9}">
+                    <input type="url" name="url" id="url">
+                    <input type="search" name="search" id="search">
+                    <input type="email" name="email" id="email">
+                    <input type="color" name="color" id="color">
                     <input type="text" name="text" id="text" maxlength="10" required>
                     <input type="number" name="number" id="number" min="0" max="10" step="1" required>
 
@@ -214,7 +246,8 @@
                     <input type="radio" name="radio" id="radio-2">
 
                     <input type="password" name="password" id="password">
-                    
+
+                    <input type="file" name="file" id="file" multiple>
                     <input type="reset" value="Видалити">
                     <input type="button" value="Кнопка">
                     <input type="submit" value="Відправити">
