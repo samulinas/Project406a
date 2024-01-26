@@ -217,7 +217,7 @@
                         });
                     </script>
                     <label>10</label>
-                    <input type="image" src="" alt="">
+                    <input width="20" type="image" src="picture.jpg" alt="image">
 
                     <input type="datetime-local" name="datetime-local" id="datetime-local">
                     <input autocomplete="off" type="year" name="year" id="year">
@@ -251,6 +251,31 @@
                     <input type="reset" value="Видалити">
                     <input type="button" value="Кнопка">
                     <input type="submit" value="Відправити">
+
+                    <textarea wrap="hard" name="textarea" id="textarea" cols="50" rows="5"></textarea>
+                    <button id="button-1" onclick="mouseTest1()" type="button">Кнопка</button>
+                    <p id="demo">Кликните по кнопке для запуска скрипта:</p>
+                    <script>
+                    function mouseTest1() {
+                      var x = document.getElementById("demo"); // находим элемент с классом demo
+                      x.style.fontSize = "25px"; // задаем размер шрифта
+                      x.style.color = "orange"; // задаем цвет текста
+                      x.style.backgroundColor="#555555"; // задаем цвет заднего фона
+                    }
+                    </script>
+                    <select name="select" id="select">
+                        <optgroup label="RGB">
+                            <option value="Red">Red</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                        </optgroup>
+                        <optgroup label="HSL">
+                            <option value="Hue">Hue</option>
+                            <option value="Saturation">Saturation</option>
+                            <option value="Lightness">Lightness</option>
+                        </optgroup>
+                    </select>
+                    
                 </form>
             </article>
         </section>
