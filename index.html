@@ -98,10 +98,10 @@
 
 <body>
     <header>
-        <h1>Великий заголовок 1 рівня</h1>
+        <h1 style="background: green;" contenteditable="true" spellcheck="true">Великий заголовок 1 рівня</h1>
         <abbr title="Мова розмітки гіпертексту"><dfn>HTML</dfn></abbr><br>
         <nav>
-            <a href="https://google.com">Google</a>
+            <a accesskey="h" href="https://google.com">Google</a>
             <a href="contacts.html" target="_self">Контакти</a>
             <a href="#footer" target="_self">Якір</a>
         </nav>
@@ -109,6 +109,10 @@
     <main>
         <section>
             <article>
+                <details>
+                    <summary>Read more</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.</p>
+                </details>
                 <h6>Маленький заголовок 6 рівня</h6>
                 <p>
                     <b>Lorem ipsum dolor</b><br> sit amet consectetur <strong>adipisicing elit</strong>. Sit nihil
@@ -235,15 +239,21 @@
                     <input type="text" name="text" id="text" maxlength="10" required>
                     <input type="number" name="number" id="number" min="0" max="10" step="1" required>
 
-                    <label for="checkbox-1">Пункт 1</label>
-                    <input type="checkbox" name="checkbox" id="checkbox-1">
-                    <label for="checkbox-2">Пункт 2</label>
-                    <input type="checkbox" name="checkbox" id="checkbox-2">
+                    <fieldset>
+                        <legend>Прапорці</legend>
+                        <label for="checkbox-1">Пункт 1</label>
+                        <input type="checkbox" name="checkbox" id="checkbox-1" checked>
+                        <label for="checkbox-2">Пункт 2</label>
+                        <input type="checkbox" name="checkbox" id="checkbox-2">
+                    </fieldset>
 
-                    <label for="radio-1">Пункт 1</label>
-                    <input type="radio" name="radio" id="radio-1">
-                    <label for="radio-2">Пункт 2</label>
-                    <input type="radio" name="radio" id="radio-2">
+                    <fieldset>
+                        <legend>Перемикачі</legend>
+                        <label for="radio-1">Пункт 1</label>
+                        <input type="radio" name="radio" id="radio-1">
+                        <label for="radio-2">Пункт 2</label>
+                        <input type="radio" name="radio" id="radio-2">
+                    </fieldset>
 
                     <input type="password" name="password" id="password">
 
@@ -256,13 +266,19 @@
                     <button id="button-1" onclick="mouseTest1()" type="button">Кнопка</button>
                     <p id="demo">Кликните по кнопке для запуска скрипта:</p>
                     <script>
-                    function mouseTest1() {
-                      var x = document.getElementById("demo"); // находим элемент с классом demo
-                      x.style.fontSize = "25px"; // задаем размер шрифта
-                      x.style.color = "orange"; // задаем цвет текста
-                      x.style.backgroundColor="#555555"; // задаем цвет заднего фона
-                    }
+                        function mouseTest1() {
+                            var x = document.getElementById("demo"); // находим элемент с классом demo
+                            x.style.fontSize = "25px"; // задаем размер шрифта
+                            x.style.color = "orange"; // задаем цвет текста
+                            x.style.backgroundColor = "#555555"; // задаем цвет заднего фона
+                        }
                     </script>
+                    <datalist id="datalist">
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                    </datalist>
+                    <input autocomplete="off" type="text" name="text" id="text-2" list="datalist">
                     <select name="select" id="select">
                         <optgroup label="RGB">
                             <option value="Red">Red</option>
@@ -275,7 +291,7 @@
                             <option value="Lightness">Lightness</option>
                         </optgroup>
                     </select>
-                    
+
                 </form>
             </article>
         </section>
