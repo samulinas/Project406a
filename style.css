@@ -1,3 +1,157 @@
-body {
-    background: gray;
+* {
+  margin: 0;
 }
+
+body {
+  background: lightblue;
+  /*             display: grid;
+    grid-template: "header header" 100px
+                    "main aside" 2fr 
+                    "footer footer" 100px
+                    / 2fr 1fr; */
+}
+
+header,
+footer {
+  background: lightgreen;
+}
+
+header {
+  /* grid-area: header; */
+}
+
+footer {
+  /*  grid-area: footer; */
+}
+
+aside {
+  background: lightyellow;
+  /* grid-area: aside; */
+}
+
+section {
+  background: lightsalmon;
+}
+
+main {
+  display: flex;
+  /* grid-area: main; */
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+/*         thead {
+    background: lightcoral;
+}
+tfoot {
+    background: lightseagreen;
+}
+tbody {
+    background: rgb(10, 124, 162);
+} 
+*/
+caption {
+  text-indent: 1.25cm;
+  text-align: left;
+}
+
+.pink {
+  background: pink;
+}
+
+.red {
+  background: red;
+}
+
+form {
+  border: 1px solid black;
+}
+#password {
+  background: yellow;
+}
+input[type="tel"] {
+  background: beige;
+}
+::placeholder {
+  color: blue;
+}
+header > a {
+  background: yellow;
+}
+header a {
+  background: yellow;
+}
+abbr + a {
+  background: rgb(3, 254, 250);
+}
+abbr ~ a {
+  background: rgb(3, 254, 250);
+}
+a:hover {
+  background: white;
+}
+a:active {
+  background: blue;
+}
+a:link {
+  color: red;
+}
+a:visited {
+  color: rgb(109, 3, 21);
+}
+:checked {
+  width: 30px;
+  height: 30px;
+}
+:default {
+  width: 30px;
+  height: 30px;
+}
+:disabled {
+  background: rgb(103, 103, 126);
+}
+textarea:enabled {
+  background: rgb(208, 199, 199);
+}
+:empty {
+  padding-top: 50px;
+}
+.ol-list > li:first-child {
+  background: yellow;
+}
+.ol-list > li:last-child {
+  background: yellow;
+}
+.ol-list > li:nth-child(2) {
+  background: green;
+}
+.dl-list > :first-of-type {
+  background: rgb(3, 254, 250);
+}
+.dl-list > :last-of-type {
+  background: rgb(3, 254, 250);
+}
+.dl-list > :nth-of-type(even) {
+  background: rgb(25, 34, 218);
+}
+.ul-list > li:only-child {
+  background: red;
+}
+.dl-list-2 > :only-of-type {
+  background: green;
+}
+.ol-list-2 > li:nth-last-child(1) {
+  background: chartreuse;
+}
+.ol-list-2 > li:nth-last-of-type(1) {
+  background: rgb(247, 0, 255);
+}
+

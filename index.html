@@ -13,107 +13,31 @@
     <base target="_blank">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-        }
-
-        body {
-            background: lightblue;
-            /*             display: grid;
-            grid-template: "header header" 100px
-                            "main aside" 2fr 
-                            "footer footer" 100px
-                            / 2fr 1fr; */
-        }
-
-        header,
-        footer {
-            background: lightgreen;
-        }
-
-        header {
-            /* grid-area: header; */
-        }
-
-        footer {
-            /*  grid-area: footer; */
-        }
-
-        nav {
-            background: lightpink;
-            text-align: center;
-        }
-
-        aside {
-            background: lightyellow;
-            /* grid-area: aside; */
-        }
-
-        section {
-            background: lightsalmon;
-        }
-
-        main {
-            display: flex;
-            /* grid-area: main; */
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        table {
-            width: 100%;
-        }
-
-        /*         thead {
-            background: lightcoral;
-        }
-        tfoot {
-            background: lightseagreen;
-        }
-        tbody {
-            background: rgb(10, 124, 162);
-        } */
-        caption {
-            text-indent: 1.25cm;
-            text-align: left;
-        }
-
-        .pink {
-            background: pink;
-        }
-
-        .red {
-            background: red;
-        }
-
-        form {
-            border: 1px solid black;
-        }
     </style>
 </head>
 
 <body>
     <header>
         <h1 style="background: green;" contenteditable="true" spellcheck="true">Великий заголовок 1 рівня</h1>
-        <abbr title="Мова розмітки гіпертексту"><dfn>HTML</dfn></abbr><br>
+        <abbr title="Мова розмітки гіпертексту"><dfn>HTML</dfn></abbr>
+        <a href="https://google.com">Окреме посилання 1</a>
         <nav>
             <a accesskey="h" href="https://google.com">Google</a>
             <a href="contacts.html" target="_self">Контакти</a>
             <a href="#footer" target="_self">Якір</a>
         </nav>
+        <a href="https://google.com">Окреме посилання 2</a>
     </header>
     <main>
         <section>
             <article>
                 <details>
                     <summary>Read more</summary>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
+                    </p>
                 </details>
                 <h6>Маленький заголовок 6 рівня</h6>
+                <p></p>
                 <p>
                     <b>Lorem ipsum dolor</b><br> sit amet consectetur <strong>adipisicing elit</strong>. Sit nihil
                     minima
@@ -153,22 +77,47 @@
                 <cite>Джерело: google.com</cite>
                 <code>Console.WriteLine("Hello World!");</code>
                 <samp>Hello World!</samp>
-                <ol start="4" type="I">
+                <ol class="ol-list" start="4" type="I">
                     <li>html</li>
                     <li>css</li>
                     <li>js</li>
                 </ol>
-                <ul type="square">
+                <ul class="ul-list" type="square">
                     <li>html</li>
-                    <li>css</li>
-                    <li>js</li>
                 </ul>
-                <dl>
+                <dl class="dl-list-2">
+                    <dt>html</dt>
+                    <dd>Мова розмітки гіпертексту</dd>
+                </dl>
+                <dl class="dl-list">
                     <dt>html</dt>
                     <dd>Мова розмітки гіпертексту</dd>
                     <dt>css</dt>
                     <dd>Каскадна таблиця стилів</dd>
+                    <dt>js</dt>
+                    <dd>Скриптова програмування</dd>
                 </dl>
+                <ol class="ol-list-2" class="ol-comb">
+                    <li>abc</li>
+                    <li>
+                        <ol>
+                            <li>a</li>
+                            <li>b</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <ol>
+                            <li>a</li>
+                            <li>b</li>
+                            <li>
+                                <ol>
+                                    <li>a</li>
+                                    <li>b</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
                 <table>
                     <caption>Таблиця 1 - Назва таблиці</caption>
                     <colgroup>
@@ -207,7 +156,7 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form action="handler.php">
+                <form action="handler.php" novalidate>
                     <input type="hidden" name="hidden">
                     <output id="output"></output>
                     <label>0</label>
@@ -232,8 +181,8 @@
 
                     <input type="tel" name="tel" id="tel" value="380" pattern="[0-9]{12}"
                         title="Введіть дані формату 380[0-9]{9}">
-                    <input type="url" name="url" id="url">
-                    <input type="search" name="search" id="search">
+                    <input type="url" name="url" id="url" placeholder="Введіть URL">
+                    <input type="search" name="search" id="search" disabled>
                     <input type="email" name="email" id="email">
                     <input type="color" name="color" id="color">
                     <input type="text" name="text" id="text" maxlength="10" required>
