@@ -193,10 +193,10 @@ textarea:read-write {
   display: block;
   background: pink;
   height: 100px;
-  margin: 5px 6px 7px 8px;
+/*   margin: 5px 6px 7px 8px;
   margin-right: 10px;
   padding: 10px 9px 8px 7px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; */
   box-sizing: border-box;
   visibility: visible;
 }
@@ -211,16 +211,55 @@ textarea:read-write {
   }
 }
 .div-main {
-  height: 120px;
+  height: 250px;
   border: 2px solid black;
   position: sticky;
   overflow: hidden;
 }
 .div-main > div:first-child {
-  width: 200px;
-  position: relative;
+  height: 200px;
+  width: 400px;
   float: left;
-  z-index: 1;
+  padding: 10px;
+  margin: 20px;
+/*   background-color: brown;
+  background-image: url("/picture.jpg");
+  background-size: 400px 200px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-clip: content-box;
+  background-attachment: local; */
+  background: brown url("/picture.jpg") center right / 400px 200px no-repeat content-box local;
+ /*  border: 10px dashed red; */
+  border-width: 10px;
+  border-style: dashed;
+  border-color: red;
+  border-top-width: 10px;
+  border-right-width: 15px;
+  border-bottom-width: 20px;
+  border-left-width: 25px;
+  border-top-style: solid;
+  border-right-style: dotted;
+  border-bottom-style: double;
+  border-left-style: dashed;
+  border-top-color:rgb(3, 254, 250);
+  border-right-color:rgba(155, 176, 57, 0.2);
+  border-bottom-color: #f4d;
+  border-left-color: red;
+  border-radius: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 40px;
+  outline: 10px solid green;
+  outline-width: 10px;
+  outline-style: solid;
+  outline-color: green;
+  outline-offset: 10px;
+  box-shadow: 4px 4px 10px black;
+  font-family: "Neue Machina";
+  font-size: 20px;
+
 }
 .div-main > div:last-child {
   width: 200px;
