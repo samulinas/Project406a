@@ -37,7 +37,11 @@
                     </p>
                 </details>
                 <h6>Маленький заголовок 6 рівня</h6>
-                <p></p>
+                <p>Text</p>
+                <div class="div-main">
+                    <div class="block">Text 1</div>
+                    <div class="block">Text 2</div>
+                </div>
                 <p>
                     <b>Lorem ipsum dolor</b><br> sit amet consectetur <strong>adipisicing elit</strong>. Sit nihil
                     minima
@@ -118,6 +122,33 @@
                         </ol>
                     </li>
                 </ol>
+                <div style="display: none; position: fixed; top: 50%; left: 50%; background: white; padding: 20px;" id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Це модальне вікно, яке відкриється через 2 секунди.</p>
+                    </div>
+                </div>
+                
+                <script>
+                    // Функція для відкриття модального вікна через 2 секунди
+                    function openModal() {
+                        setTimeout(function() {
+                            document.getElementById('myModal').style.display = 'block';
+                        }, 5000); // 2000 мс = 2 секунди
+                    }
+                
+                    // Відкриття модального вікна
+                    openModal();
+                
+                    // Отримання кнопки закриття
+                    var closeButton = document.getElementsByClassName('close')[0];
+                
+                    // Додавання обробника подій для кнопки закриття
+                    closeButton.addEventListener('click', function() {
+                        document.getElementById('myModal').style.display = 'none';
+                    });
+                </script>
+                
                 <table>
                     <caption>Таблиця 1 - Назва таблиці</caption>
                     <colgroup>
@@ -156,7 +187,7 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form action="handler.php" novalidate>
+                <form action="handler.php">
                     <input type="hidden" name="hidden">
                     <output id="output"></output>
                     <label>0</label>
@@ -211,7 +242,8 @@
                     <input type="button" value="Кнопка">
                     <input type="submit" value="Відправити">
 
-                    <textarea wrap="hard" name="textarea" id="textarea" cols="50" rows="5"></textarea>
+                    <textarea wrap="hard" name="textarea" id="textarea" cols="50" rows="5" readonly>Повідомлення тільки для читання</textarea>
+                    <textarea wrap="hard" name="textarea" id="textarea" cols="50" rows="5">Повідомлення тільки для читання</textarea>
                     <button id="button-1" onclick="mouseTest1()" type="button">Кнопка</button>
                     <p id="demo">Кликните по кнопке для запуска скрипта:</p>
                     <script>
