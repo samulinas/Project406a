@@ -1,5 +1,24 @@
 @charset "UTF-8";
-
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Light.woff2), format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Regular.woff2), format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Bold.woff2), format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url(/fonts/Neue-Machina/NeueMachina-Black.woff2), format("woff2");
+  font-weight: 900;
+}
 * {
   margin: 0;
 }
@@ -214,7 +233,6 @@ textarea:read-write {
   height: 250px;
   border: 2px solid black;
   position: sticky;
-  overflow: hidden;
 }
 .div-main > div:first-child {
   height: 200px;
@@ -257,20 +275,151 @@ textarea:read-write {
   outline-color: green;
   outline-offset: 10px;
   box-shadow: 4px 4px 10px black;
-  font-family: "Neue Machina";
+/*   font-family: "Neue Machina", sans-serif ;
   font-size: 20px;
-
+  font-weight: 900;
+  font-variant: normal;
+  font-style: italic;
+  line-height: 1.2; */
+  font: italic normal 900 20px/1.5 "Playfair Display";
+  user-select: all;
 }
 .div-main > div:last-child {
-  width: 200px;
+  width: 400px;
+  height: 200px;
   position: relative;
   float: right;
   margin-left: -100px;
   background: rgba(155, 176, 57, 0.8);
   z-index: 2;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-indent: 1.25cm;
+  text-align: left;
+  text-align-last: center;
+  text-transform: uppercase;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-y: scroll;
+  overflow-x: auto;
+  white-space: normal;
+ /*  text-decoration: line-through wavy blue 1px; */
+ text-decoration-line: underline;
+ text-decoration-style: solid;
+ text-decoration-color: green;
+ text-decoration-thickness: 2px;
+/*  text-emphasis: triangle green; */
+text-emphasis-style: triangle;
+text-emphasis-color: green;
+text-shadow: 2px 2px 5px black;
+caret-color: #f4d;
+cursor: default;
+
 }
 article {
   position: relative;
   top: 5px;
   left: 5px;
 }
+textarea {
+  resize: vertical;
+}
+img {
+  pointer-events: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 20px 10px;
+  caption-side: bottom;
+  empty-cells: hide;
+  table-layout: fixed;
+}
+td:empty {
+  background-color: green;
+}
+td {
+  text-align: center;
+  vertical-align: center;
+}
+.ol-table > li {
+  /* list-style: upper-roman inside; */
+  list-style-type: upper-roman;
+  list-style-position: inside;
+/*   list-style-image: url(/favicon.ico); */
+  background: #f4d;
+}
+.td-table {
+  /* column-count: 2; */
+  /* column-rule: 3px dashed blue; */
+  column-rule-color: blue;
+  column-rule-width: 3px;
+  column-rule-style: dashed;
+  column-gap: 23px;
+  column-fill: auto;
+  height: 250px;
+  overflow: hidden;
+  column-width: 150px;
+}
+.text-table {
+  column-span: none;
+  background: green;
+}
+.div-transform {
+  border: 5px solid red;
+  margin-top: 20px;
+}
+.div-transform > div {
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  background: pink;
+  padding: 10px;
+  margin: 5px;
+/*transition: all 1s linear;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0; */
+  animation-name: div-transform;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+.div-transform > div:nth-child(1):hover {
+  /* transform: translate(30px, -20px); */
+  transform: translateX(30px) translateY(-20px);
+  animation-play-state: paused;
+
+}
+.div-transform > div:nth-child(2):hover {
+  /* transform: scale(0.5, 2); */
+  transform: scaleX(0.5) scaleY(2);
+  animation-play-state: paused;
+}
+.div-transform > div:nth-child(3):hover {
+/*   transform: skew(30deg, 10deg); */
+  transform: skewX(30deg) skewY(10deg);
+  animation-play-state: paused;
+}
+.div-transform > div:nth-child(4):hover {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    animation-play-state: paused;
+}
+.div-transform > div:nth-child(5):hover {
+  transform: matrix(0.5, 0.3, 0.1, 2, 30, -20);
+  animation-play-state: paused;
+}
+@keyframes div-transform {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(30px) translateY(-20px);
+  }
+}
+

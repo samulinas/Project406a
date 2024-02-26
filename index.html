@@ -40,7 +40,19 @@
                 <p>Text</p>
                 <div class="div-main">
                     <div class="block">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
-                    <div class="block">Text 2</div>
+                    <div contenteditable="true" class="block">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus molestiae ad
+                        doloremque minima. Sapiente, dicta rerum. At, ab est. Repellendus nostrum saepe sapiente impedit
+                        est quisquam? Reiciendis autem ratione neque.
+                    </div>
+                </div>
+                <div class="div-transform">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                </div>
                 </div>
                 <p>
                     <b>Lorem ipsum dolor</b><br> sit amet consectetur <strong>adipisicing elit</strong>. Sit nihil
@@ -81,6 +93,58 @@
                 <cite>Джерело: google.com</cite>
                 <code>Console.WriteLine("Hello World!");</code>
                 <samp>Hello World!</samp>
+                <table>
+                    <colgroup>
+                        <col class="red" span="2">
+                        <col class="pink" span="2">
+                    </colgroup>
+                    <caption>Таблиця 1 - Назва таблиці</caption>
+                    <thead>
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">
+                                <ol class="ol-table">
+                                    <li>s</li>
+                                    <li>d</li>
+                                    <li>a</li>
+                                </ol>
+                            </td>
+                            <td>2</td>
+                            <td colspan="2" rowspan="2">
+                                <div class="td-table">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. <div class="text-table">
+                                        Text</div>Dolor provident omnis, exercitationem nam facilis officia? At
+                                    dignissimos maiores, quos ad quaerat eum commodi recusandae esse similique sit
+                                    consequatur ex laboriosam! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Culpa qui reprehenderit eveniet? Nobis eaque itaque error blanditiis? Dolorem ipsam
+                                    rem labore ipsa non sed? Iusto quaerat est quos! Sapiente, provident.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" align="right">Результат</td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tfoot>
+                </table>
                 <ol class="ol-list" start="4" type="I">
                     <li>html</li>
                     <li>css</li>
@@ -122,71 +186,32 @@
                         </ol>
                     </li>
                 </ol>
-                <div style="display: none; position: fixed; top: 50%; left: 50%; background: white; padding: 20px;" id="myModal" class="modal">
+ <!--                <div style="display: none; position: fixed; top: 50%; left: 50%; background: white; padding: 20px;"
+                    id="myModal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <p>Це модальне вікно, яке відкриється через 2 секунди.</p>
                     </div>
                 </div>
-                
                 <script>
                     // Функція для відкриття модального вікна через 2 секунди
                     function openModal() {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             document.getElementById('myModal').style.display = 'block';
-                        }, 5000); // 2000 мс = 2 секунди
+                        }, 60000); // 2000 мс = 2 секунди
                     }
-                
+
                     // Відкриття модального вікна
                     openModal();
-                
+
                     // Отримання кнопки закриття
                     var closeButton = document.getElementsByClassName('close')[0];
-                
+
                     // Додавання обробника подій для кнопки закриття
-                    closeButton.addEventListener('click', function() {
+                    closeButton.addEventListener('click', function () {
                         document.getElementById('myModal').style.display = 'none';
                     });
-                </script>
-                
-                <table>
-                    <caption>Таблиця 1 - Назва таблиці</caption>
-                    <colgroup>
-                        <col class="red" span="2">
-                        <col class="pink" span="2">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                        </tr>
-                        <tr>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">1</td>
-                            <td>2</td>
-                            <td colspan="2">3</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td colspan="2">3</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2" align="right">Результат</td>
-                            <td colspan="2">3</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                </script> -->
                 <form action="handler.php">
                     <input type="hidden" name="hidden">
                     <output id="output"></output>
@@ -242,8 +267,10 @@
                     <input type="button" value="Кнопка">
                     <input type="submit" value="Відправити">
 
-                    <textarea wrap="hard" name="textarea" id="textarea" cols="50" rows="5" readonly>Повідомлення тільки для читання</textarea>
-                    <textarea wrap="hard" name="textarea" id="textarea" cols="50" rows="5">Повідомлення тільки для читання</textarea>
+                    <textarea wrap="hard" name="textarea" id="textarea" cols="50" rows="5"
+                        readonly>Повідомлення тільки для читання</textarea>
+                    <textarea wrap="hard" name="textarea" id="textarea" cols="50"
+                        rows="5">Повідомлення тільки для читання</textarea>
                     <button id="button-1" onclick="mouseTest1()" type="button">Кнопка</button>
                     <p id="demo">Кликните по кнопке для запуска скрипта:</p>
                     <script>
