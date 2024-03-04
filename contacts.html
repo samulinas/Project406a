@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            margin: 0;
-        }
-        body {
-            background: lightblue;
-        }
-        header {
-            background: lightgreen;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Без обводки внешней границы таблицы</title>
+<style>
+  table {
+    border-collapse: collapse;
+    border: none; /* Убираем внешнюю границу таблицы */
+  }
+  th, td {
+    border: 1px solid black; /* Устанавливаем границы для ячеек */
+    padding: 8px; /* Добавляем отступы в ячейках */
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Великий заголовок 1 рівня</h1>
-        <abbr title="Мова розмітки гіпертексту"><dfn>HTML</dfn></abbr><br>
-        <a href="https://google.com">Google</a>
-        <a href="https://google.com">Контакти</a>
-        <a href="https://google.com">Google</a>
-    </header>
-    <p>Контактна інформація</p>
-    <a href="index.html">Повернутися на головну.</a>
+
+<table>
+  <tr>
+    <th>Заголовок 1</th>
+    <th>Заголовок 2</th>
+    <th>Заголовок 3</th>
+  </tr>
+  <tr>
+    <td>Ячейка 1</td>
+    <td>Ячейка 2</td>
+    <td>Ячейка 3</td>
+  </tr>
+  <tr>
+    <td>Ячейка 4</td>
+    <td>Ячейка 5</td>
+    <td>Ячейка 6</td>
+  </tr>
+</table>
+
 </body>
 </html>
